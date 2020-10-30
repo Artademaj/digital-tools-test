@@ -1,3 +1,4 @@
+/* installing postgres and create the new file "RSL" */ 
 sudo apt-get update
 sudo apt install postgresql libpq-dev postgresql-client postgresql-client-common -y
 sudo apt install postgresql libpq-dev postgresql-client postgresql-client-common -y > myPersonalLog
@@ -6,11 +7,11 @@ psql test
 pwd Is
 mkdir RSL
 cd RSL
-/* installing postgres and create the new file "RSL" */ 
 
-psql test 
 /* be able, to create a new table for the test */ 
+psql test 
 
+/* creating table movies */ 
 CREATE TABLE movies (
 url text,
 title text,
@@ -27,10 +28,12 @@ Metascore text,
 scoreCounts text
 );
 
-\copy movies FROM '/home/pi/RSL/moviesFromMetacritic.csv'delimiter ';' csv header;
-/* output: 5229 / import csv file to our table */ 
+/* import csv file to our table with output: 5229 */ 
+\copy movies FROM '/home/pi/RSL/moviesFromMetacritic.csv' delimiter ';' csv header;
 
+/* check, if my favorite movies are included in the dataset */ 
 SELECT * FROM movies where url='dirty-dancing';
 SELECT * FROM movies where url='scarface';
-SELECT * FROM movies where url='the-life-of-david-gale';
-/* check, if my favorite movies are included in the dataset */ 
+SELECT * FROM movies where url='the-lif-of-david-gale';
+SELECT * FROM movies where url='iron-man';
+
