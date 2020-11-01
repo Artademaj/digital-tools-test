@@ -64,3 +64,6 @@ Second, I got a much higher selection of movies, which allows me to choose betwe
 A larger selection means a greater chance to find suitable movies. 
 It is also very important to mention the highest ratings for other movies 
 actually appealed to me more than the lower ratings from other users.
+
+Everything is saved in github as well: https://github.com/Artademaj/digital-tools-test.git 
+
